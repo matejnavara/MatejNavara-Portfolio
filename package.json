@@ -1,0 +1,50 @@
+{
+  "name": "MatejNavara",
+  "version": "1.0.1",
+  "description": "This is a website for Matej Navara",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run watch:all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "scss": "node-sass -o assets/css/ assets/css/",
+    "watch:scss": "onchange 'assets/css/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f assets/fonts/* dist/assets/fonts",
+    "imagemin": "imagemin images/* -o dist/images",
+    "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
+  },
+  "author": "Matej Navara",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "cssmin": "^0.4.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-flatmap": "^1.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-rev": "^8.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-usemin": "^0.3.28",
+    "htmlmin": "0.0.7",
+    "include-media": "^1.4.9",
+    "lite-server": "^2.2.2",
+    "node-sass": "^4.7.2",
+    "onchange": "^3.3.0",
+    "parallelshell": "^3.0.2",
+    "rimraf": "^2.6.2",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.5.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "tether": "^1.4.3"
+  }
+}
