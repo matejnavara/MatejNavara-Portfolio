@@ -5,7 +5,7 @@
 		<title>Matej Navara's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="shortcut icon" href="images/icon.ico">
+		<link rel="shortcut icon" href="favicon.ico">
 
 		<!-- build:css css/main.css -->
 		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -32,7 +32,7 @@
 				<article class="container" id="top">
 					<div class="row">
 						<div class="4u 12u(mobile)">
-							<span class="image fit"><img src="images/profile.gif" alt="" /></span>
+							<span class="image fit"><img src="assets/images/profile.gif" alt="" /></span>
 						</div>
 						<div class="8u 12u(mobile)">
 							<header>
@@ -57,21 +57,21 @@
 						<div class="row">
 							<div class="4u 12u(mobile)">
 								<article class="box style2">
-									<a href="portfolio_frosty-the-no-man.html" class="image featured"><img src="images/picxx.jpg" alt="" /></a>
+									<a href="portfolio_frosty-the-no-man.html" class="image featured"><img src="assets/images/picxx.jpg" alt="" /></a>
 									<h3><a href="portfolio_frosty-the-no-man.html">Frosty the No Man</a></h3>
 									<p>You are a giant sentient iceberg washed up on a tropical beach. Run as far as you can before you melt. Created in a week whilst sailing the Andaman Sea with American McGee for Pirate Jam 2017.</p>
 								</article>
 							</div>
 							<div class="4u 12u(mobile)">
 								<article class="box style2">
-									<a href="portfolio_whodunnit-padma.html" class="image featured"><img src="images/pic06b.jpg" alt="" /></a>
+									<a href="portfolio_whodunnit-padma.html" class="image featured"><img src="assets/images/pic06b.jpg" alt="" /></a>
 									<h3><a href="portfolio_whodunnit-padma.html">Whodunit Padma</a></h3>
 									<p>Play as Padma, the ship's AI, in this sci-fi murder mystery short listed for the Tranzfuser Fund 2016. Developed in 3 months using Unity/C#/Ink.</p>
 								</article>
 							</div>
 							<div class="4u 12u(mobile)">
 								<article class="box style2">
-									<a href="portfolio_procedural-puzzle-level-framework.html" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+									<a href="portfolio_procedural-puzzle-level-framework.html" class="image featured"><img src="assets/images/pic03.jpg" alt="" /></a>
 									<h3><a href="portfolio_procedural-puzzle-level-framework.html">Procedural Puzzle Level Generation</a></h3>
 									<p>Final year project for Computer Science (Games) BSc Hons at the University of Brighton. Developed using Unity and C#/Javascript.</p>
 								</article>
@@ -80,21 +80,21 @@
 						<div class="row">
 							<div class="4u 12u(mobile)">
 								<article class="box style2">
-									<a href="portfolio_greedy-gull-game.html" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+									<a href="portfolio_greedy-gull-game.html" class="image featured"><img src="assets/images/pic02.jpg" alt="" /></a>
 									<h3><a href="portfolio_greedy-gull-game.html">Greedy Gull Game</a></h3>
 									<p>Early prototype of the Greedy Gull game created in Java using the LibGDX framework.</p>
 								</article>
 							</div>
 							<div class="4u 12u(mobile)">
 								<article class="box style2">
-									<a href="portfolio_super-awesome-line-game.html" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+									<a href="portfolio_super-awesome-line-game.html" class="image featured"><img src="assets/images/pic01.jpg" alt="" /></a>
 									<h3><a href="portfolio_super-awesome-line-game.html">Super Awesome Line Game</a></h3>
 									<p>The first published Android app from our Greedy Gulls Studio. Developed in Java using the LibGDX framework.</p>
 								</article>
 							</div>
 							<div class="4u 12u(mobile)">
 								<article class="box style2">
-									<a href="portfolio_infection-simulation.html" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+									<a href="portfolio_infection-simulation.html" class="image featured"><img src="assets/images/pic04.jpg" alt="" /></a>
 									<h3><a href="portfolio_infection-simulation.html">Infection Propagation Simulation</a></h3>
 									<p>Healthy cells vs Infected cells. Python simulation using the Pygame framework.</p>
 								</article>
@@ -103,21 +103,50 @@
 						<div class="row">
 							<div class="4u 12u(mobile)">
 								<article class="box style2">
-									<a href="portfolio_tidal-game.html" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+									<a href="portfolio_tidal-game.html" class="image featured"><img src="assets/images/pic05.jpg" alt="" /></a>
 									<h3><a href="portfolio_tidal-game.html">Tidal Browser Game</a></h3>
 									<p>Created in 8 hours for the EGX Rezzed Creative Assembly Game Jam. Developed using pure Javascript.</p>
 								</article>
 							</div>
 							<div class="4u 12u(mobile)">
 								<article class="box style2">
-									<a href="#" class="image featured"><img src="images/pic0.jpg" alt="" /></a>
+									<a href="#" class="image featured"><img src="assets/images/pic0.jpg" alt="" /></a>
 									<h3><a href="#"></a></h3>
 									<p>This portfolio is still under development so please be patient for further content.</p>
 								</article>
 							</div>
 						</div>
-					</div>
+					</div>					
 				</article>
+				<div class="container">
+					<div class="row">
+						<!-- Controls -->
+						<div class="clearfix">
+							<div class="pull-left">
+								 <h4>View:</h4>
+							</div>
+							
+							<div class="pull-right">
+								<select id="asc">
+									<option value="a_z" selected>Latest</option>
+									<option value="z_a">Oldest</option>
+								</select>
+			
+								<select id="filter">
+									<option value="all" selected>All</option>
+									<option value="blue">Games</option>
+									<option value="violet">Apps</option>
+									<option value="red">Websites</option>
+									<option value="red">Software</option>
+								</select>
+							</div>
+						</div>
+			
+						<!-- Items Grid -->
+						<div class="grid" style="width:100%">
+						</div>
+					</div>
+				</div>
 			</div>
 			
 			<!-- Work -->
@@ -135,7 +164,7 @@
 									<hr/>
 									<p>Matej Navara is an aspiring game developer based in London. Recently he graduated with a BSc Hons in Computer Science (Games) from the University of Brighton. During this time he studied a wide range of subject areas from web development to artificial intelligence, all while maintaining various jobs outside of university in different industries. During the third year he created a small development studio with three other students to form Greedy Gull Studios (<a target="_blank" href="http://www.greedygull.co.uk">www.GreedyGull.co.uk</a>).</p>
 									<p>Now after graduating and taking a well deserved few months travelling Matej is eager to begin his journey into the industry he has sought after since childhood. Although not yet specialized in a particular field he is eager to continue learning and spends much of his free time developing skills in key applications and programming languages.</p>
-									<h4>CV: <a target="_blank" href="downloads/MatejNavara_cv.pdf" class="icon fa-file-pdf-o fa-2x"></a></h4>
+									<h4>CV: <a target="_blank" href="assets/downloads/MatejNavara_cv.pdf" class="icon fa-file-pdf-o fa-2x"></a></h4>
 								</section>
 							</div>
 							<div class="4u 12u(mobile)">
@@ -218,13 +247,32 @@
 				</article>
 			</div>
 
+			<div id="contact-test">
+			</div>
+
+			<!-- #include virtual="partials/contact.html" -->
+
 		<!-- build:js js/main.js -->
 		<script type='text/javascript' src="node_modules/jquery/dist/jquery.min.js"></script>
 		<script type='text/javascript' src="node_modules/tether/dist/js/tether.min.js"></script>
-		<script type='text/javascript' src="js/popper.min.js"></script>
+		<!-- <script type='text/javascript' src="js/popper.min.js"></script> -->
 		<script type='text/javascript' src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script type='text/javascript' src="js/scripts.js"></script>
+		<script type='text/javascript' src="node_modules/gridifier/dist/gridifier.min.js"></script>
+		<script type='text/javascript' src="assets/js/modernizr.custom.js"></script>
+		<script type='text/javascript' src="assets/js/proto.js"></script>
+		<script type='text/javascript' src="assets/js/projectgrid.js"></script>
 		<!-- endbuild -->
+
+		<script type='text/javascript'>
+			$(function(){
+				$("#contact-test").load("partials/contact.html"); 
+			});
+
+			$(document).ready(function() {
+				var app = new App();
+				app.init();
+			});
+		</script>
 
 	</body>
 </html>

@@ -13,21 +13,21 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync');
 
 gulp.task('sass', function () {
-  return gulp.src('./css/*.scss')
+  return gulp.src('./assets/css/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./assets/css'));
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch('./css/*.scss', ['sass']);
+  gulp.watch('./assets/css/*.scss', ['sass']);
 });
 
 gulp.task('browser-sync', function () {
    var files = [
       './*.html',
-      './css/*.css',
-      './img/*.{png,jpg,jpeg,gif}',
-      './js/*.js'
+      './assets/css/*.css',
+      './assets/images/*.{png,jpg,jpeg,gif}',
+      './assets/js/*.js'
    ];
 
    browserSync.init(files, {
@@ -44,8 +44,8 @@ gulp.task('clean', function() {
 });
 
 gulp.task('copyfonts', function() {
-   gulp.src('./fonts/**/*.{ttf,woff,eof,svg}*')
-   .pipe(gulp.dest('./dist/fonts'));
+   gulp.src('./assets/fonts/**/*.{ttf,woff,eof,svg}*')
+   .pipe(gulp.dest('./dist/assets/fonts'));
 });
 
 gulp.task('copyfavicon', function() {
@@ -55,9 +55,9 @@ gulp.task('copyfavicon', function() {
 
 // Images
 gulp.task('imagemin', function() {
-    return gulp.src('img/*.{png,jpg,jpeg,gif}')
+    return gulp.src('assets/images/*.{png,jpg,jpeg,gif}')
       .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-      .pipe(gulp.dest('dist/img'));
+      .pipe(gulp.dest('dist/assets/images'));
   });
 
 // Usemin
