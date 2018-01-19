@@ -39,14 +39,10 @@ select {
     padding: 10px 10px;
 }
 
-.redItem .item-wrapper {
-    background: #ce5e43;
+.accordion-toggle:after {
+    font-family: 'FontAwesome';
+    content: "\f078";
 }
-
-.violetItem .item-wrapper {
-    background: #9a7eb4;
-}
-
-.blueItem .item-wrapper {
-    background: #579cdb;
+.accordion-toggle.collapsed:after {
+    content: "\f077";
 }

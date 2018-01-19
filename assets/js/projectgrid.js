@@ -143,23 +143,23 @@ proto(App, {
                 name: "CloudPusher Website", 
                 desc: "Prototype site for cloud photography social network.",
                 link: '"http://cloudpusher.tk/" target="_blank"',
-                img: "",
+                img: "web_cloudpusher.gif",
                 date: "2017",
                 filter: ["website", "javascript"]
             },
             {
                 name: "iTracR", 
-                desc: "blah",
-                link: "portfolio_tidal-game.html",
-                img: "",
+                desc: "Commercial timecard and resource management software. Created using Django, MySQL and web technologies. Detail page pending.",
+                link: '""',
+                img: "itracr.png",
                 date: "2017",
                 filter: ["software", "python"]
             },
             {
-                name: "Document Management", 
-                desc: "blah",
-                link: "portfolio_tidal-game.html",
-                img: "",
+                name: "Document Management Microservice", 
+                desc: "Headless RESTful document management microservice for the UK Ministry of Justice. Created using SpringBoot and Postgres. Detail page pending.",
+                link: '""',
+                img: "moj.png",
                 date: "2017",
                 filter: ["software", "java"]
             },
