@@ -41,8 +41,58 @@ select {
 
 .accordion-toggle:after {
     font-family: 'FontAwesome';
-    content: "\f078";
+    content: "\f077";
 }
 .accordion-toggle.collapsed:after {
-    content: "\f077";
+    content: "\f078";
+}
+
+.accordion-toggle-2:after {
+    font-family: 'FontAwesome';
+    float: right;
+    content: "\f068";
+}
+.accordion-toggle-2.collapsed:after {
+    content: "\f067";
+}
+
+.panel-title > a:before {
+    float: right !important;
+    font-family: FontAwesome;
+    content:"\f068";
+    padding-right: 5px;
+}
+.panel-title > a.collapsed:before {
+    float: right !important;
+    content:"\f067";
+}
+
+.industry-role {
+    margin-bottom: 10px;
+}
+
+.industry-role p {
+    text-align: left;
+    margin: 0.75em !important;
+}
+
+.industry-role h4 {
+    margin-bottom: 0px !important;
+}
+
+.industry-role .card-body {
+    padding: 0.5em;
+}
+
+.avatar {
+    width: 30%;
+    float: left;
+    margin-right: 1em;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
 }
