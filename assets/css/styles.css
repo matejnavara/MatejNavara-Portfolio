@@ -67,8 +67,16 @@ select {
     content:"\f067";
 }
 
+.bio-intro {
+    font-size: 20px;
+}
+
 .industry-role {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
+}
+
+.industry-role img {
+    margin-bottom: 1.5em;
 }
 
 .industry-role p {
@@ -77,7 +85,16 @@ select {
 }
 
 .industry-role h4 {
-    margin-bottom: 0px !important;
+    margin-bottom: 0 !important;
+}
+
+.industry-role i {
+    margin-right: 1em;
+    float: right;
+}
+
+.industry-role hr {
+    margin: 2em 0 0 0;
 }
 
 .industry-role .card-body {
@@ -95,4 +112,8 @@ select {
     -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
     -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
     box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+}
+
+progress {
+    width: 80%;
 }
