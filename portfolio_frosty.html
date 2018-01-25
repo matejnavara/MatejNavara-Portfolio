@@ -5,10 +5,13 @@
 		<title>Matej Navara's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		
+		<!-- build:css css/bundle.css -->
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!-- endbuild -->
 	</head>
 	<body>
 
@@ -66,77 +69,59 @@
 									<hr/>
 									<h2>Overview</h2>
 									<br/>
-									<table>
-									<tr>
-									<td align = "left" width = "25%">
-										<p><b>Platform:</b> PC</p>
-										<p><b>Application:</b> Unity</p>
-										<p><b>Language:</b> C#/Ink</p>
-										<p><b>Team Size:</b> 1</p>
-										<p><b>Created:</b> 2017</p>
-									</td>
-									<td align = "left">
-										<p>https://matejnavara.itch.io/frosty-the-no-man</p>
-									</td>
-									</table>
+									<div class="row text-left">
+										<div class="col-3">
+											<p><b>Platform:</b> PC</p>
+											<p><b>Language:</b> C#</p>
+											<p><b>Tech:</b> Unity</p>
+											<p><b>Team Size:</b> 1</p>
+											<p><b>Created:</b> 2017</p>
+										</div>
+										<div class="col-9">
+											<p>Developed during the week long Pirate Jam 2017 sailing the Andaman Sea of Thailand with American McGee and awesome developers from around the globe.</p>
+											<p>The theme of the jam was impermanence, though it initially seemed like quite a sad theme I wanted to put a more comical spin to it. There is as much joy as there is sorrow in impermanence, just ask Frosty the No Man.</p>
+											<p>Very quick and simple prototype game, any feedback would be much appreciated. I may update, release on other platforms and/or develop a little further depending on the response. Happy melting.</p>
+										</div>
+									</div>
+									<a target="_blank" href="https://matejnavara.itch.io/frosty-the-no-man" class="button big scrolly text-center">PLAY IT NOW ON ITCH.IO</a>
 									<hr/>
 									<h2>Video</h2>
 									<div class="video-wrap">
-									<div class="video-container">
-										<iframe src="https://www.youtube.com/embed/Km9Obpk2jYI" frameborder="0" allowfullscreen></iframe>
+										<div class="video-container">
+											<iframe src="https://www.youtube.com/embed/Ek-dG1rkiRk" frameborder="0" allowfullscreen></iframe>
+										</div>
 									</div>
-									</div>
-								</section>
-									
+								</section>									
 				</article>
 			</div>
 
 		<!-- Contact -->
-			<div class="wrapper style4">
-				<article id="contact" class="container 75%">
-					<header>
-						<h2>Say Hello!</h2>
-						<p>Matej.Navara@Gmail.com</p>
-					</header>
-					<div>
-						<div class="row">
-							<div class="12u">
-								<h3>Or find me on ...</h3>
-								<ul class="social">
-									<li><a href="mailto:matej.navara@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
-									<li><a target="_blank" href="https://twitter.com/Matej_Navara" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a target="_blank" href="https://uk.linkedin.com/in/matejnavara" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a target="_blank" href="http://www.facebook.com/matej.navara" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a target="_blank" href="https://github.com/mn98" class="icon fa-github"><span class="label">Github</span></a></li>
-									<li><a target="_blank" href="http://www.greedygull.co.uk/" class="icon fa-users"><span class="label">GreedyGull</span></a></li>
-								</ul>
-								<hr />
-							</div>
-						</div>
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Matej Navara 2017. All rights reserved.</li>
-						</ul>
-					</footer>
-				</article>
-			</div>
+			<div w3-include-html="partials/contact.html"></div>
 
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/skel-viewport.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/jssor.js"></script>
+		<!-- build:js js/bundle.js -->
+		<script type='text/javascript' src="assets/js/jquery.min.js"></script>
+		<script type='text/javascript' src="assets/js/jquery.scrolly.min.js"></script>
+		<script type='text/javascript' src="assets/js/skel.min.js"></script>
+		<script type='text/javascript' src="assets/js/skel-viewport.min.js"></script>
+		<!-- <script type='text/javascript' src="node_modules/tether/dist/js/tether.min.js"></script> -->
+		<!-- <script type='text/javascript' src="js/popper.min.js"></script> -->
+		<script type='text/javascript' src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type='text/javascript' src="node_modules/gridifier/dist/gridifier.min.js"></script>
+		<script type='text/javascript' src="assets/js/modernizr.custom.js"></script>
+		<script type='text/javascript' src="assets/js/proto.js"></script>
+		<script type='text/javascript' src="assets/js/projectgrid.js"></script>
+		<script type='text/javascript' src="assets/js/util.js"></script>
+		<script type='text/javascript' src="assets/js/main.js"></script>
+		<script type='text/javascript' src="assets/js/jssor.js"></script>
+		<script type='text/javascript' src="https://www.w3schools.com/lib/w3.js"></script>
+		<!-- endbuild -->
 
-			<script>
-				jssor_1_slider_init();
-			</script>
-
+		<script>
+			jssor_1_slider_init();
+			w3.includeHTML();
+		</script>
 
 	</body>
 </html>

@@ -78,8 +78,8 @@ proto(App, {
             {
                 name: "Greedy Gull Game", 
                 desc: "Early prototype of the Greedy Gull game created in Java using the LibGDX framework.",
-                link: '"portfolio_greedy-gull-game.html"',
-                img: "pic02.jpg",
+                link: '"portfolio_greedy.html"',
+                img: "link-greedy.jpg",
                 date: "2015",
                 filter: ["game", "java"]
             },
@@ -102,8 +102,8 @@ proto(App, {
             {
                 name: "Frosty the No Man", 
                 desc: "You are a giant sentient iceberg washed up on a tropical beach. Run as far as you can before you melt. Created in a week whilst sailing the Andaman Sea with American McGee for Pirate Jam 2017.",
-                link: '"portfolio_frosty-the-no-man.html"',
-                img: "pic07.gif",
+                link: '"portfolio_frosty.html"',
+                img: "link-frosty.gif",
                 date: "2017",
                 filter: ["game", "c#"]
             },
@@ -184,6 +184,11 @@ proto(App, {
         item += '       <a href='+ object.link +' class="image featured"><img src="assets/images/'+ object.img +'" alt="" /></a>';
         item += '       <h2><a href='+ object.link +'>' + object.name + '</a></h2>';
         item += '       <p>'+ object.desc +'</p>';
+        if(!$.inArray('website',object.filter)){
+            item += '   <a class="btn btn-secondary btn-sm" href='+ object.link +' role="button">Go to site</a>'
+        } else if(object.link != '""'){
+            item += '   <a class="btn btn-secondary btn-sm" href='+ object.link +' role="button">See more details</a>'
+        }
         item += '   </div>';
         item += '</div>';
 
