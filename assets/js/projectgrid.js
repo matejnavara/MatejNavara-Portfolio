@@ -54,24 +54,24 @@ proto(App, {
             {
                 name: "Tidal Browser Game", 
                 desc: "Created in 8 hours for the EGX Rezzed Creative Assembly Game Jam. Developed using pure Javascript.",
-                link: '"portfolio_tidal-game.html"',
-                img: "pic05.jpg",
+                link: '"portfolio_tidal.html"',
+                img: "link-tidal.jpg",
                 date: "2016",
                 filter: ["game","javascript"]
             },
             {
                 name: "Infection Propagation Simulation", 
                 desc: "Healthy cells vs Infected cells. Python simulation using the Pygame framework.",
-                link: '"portfolio_infection-simulation.html"',
-                img: "pic04.jpg",
+                link: '"portfolio_contagion.html"',
+                img: "link-contagion.jpg",
                 date: "2015",
                 filter: ["software", "python"]
             },
             {
                 name: "Super Awesome Line Game", 
                 desc: "The first published Android app from our Greedy Gulls Studio. Developed in Java using the LibGDX framework.",
-                link: '"portfolio_super-awesome-line-game.html"',
-                img: "pic01.jpg",
+                link: '"portfolio_salg.html"',
+                img: "link-salg.jpg",
                 date: "2014",
                 filter: ["game", "java"]
             },
@@ -86,16 +86,16 @@ proto(App, {
             {
                 name: "Procedural Puzzle Level Generation", 
                 desc: "Final year project for Computer Science (Games) BSc Hons at the University of Brighton. Developed using Unity and C#/Javascript.",
-                link: '"portfolio_procedural-puzzle-level-framework.html"',
-                img: "pic03.jpg",
+                link: '"portfolio_pplf.html"',
+                img: "link-pplf.jpg",
                 date: "2015",
                 filter: ["game", "c#", "javascript"]
             },
             {
                 name: "Whodunit Padma", 
                 desc: "Play as Padma, the ship's AI, in this sci-fi murder mystery short listed for the Tranzfuser Fund 2016. Developed in 3 months using Unity/C#/Ink.",
-                link: '"portfolio_whodunnit-padma.html"',
-                img: "pic06.jpg",
+                link: '"portfolio_padma.html"',
+                img: "link-padma.jpg",
                 date: "2016",
                 filter: ["game", "c#"]
             },
@@ -109,9 +109,9 @@ proto(App, {
             },
             {
                 name: "Planet Sloth", 
-                desc: "Plant seeds and grow seeds in this reforestation idle game. Created over a weekend in Unity as part of Slow Game Jam 2017.",
-                link: '"https://alexanderhorowitz.itch.io/planet-sloth"',
-                img: "pic08.gif",
+                desc: "Plant seeds and grow trees in this reforestation idle game. Created over a weekend in Unity as part of Slow Game Jam 2017.",
+                link: '"portfolio_sloth.html"',
+                img: "link-sloth.gif",
                 date: "2017",
                 filter: ["game", "c#"]
             },
@@ -149,17 +149,17 @@ proto(App, {
             },
             {
                 name: "iTracR", 
-                desc: "Commercial timecard and resource management software. Created using Django, MySQL and web technologies. Detail page pending.",
+                desc: "Commercial timecard and resource management software. Created using Django, MySQL and web technologies.",
                 link: '""',
-                img: "itracr.png",
+                img: "link-itracr.png",
                 date: "2017",
                 filter: ["software", "python"]
             },
             {
                 name: "Document Management Microservice", 
-                desc: "Headless RESTful document management microservice for the UK Ministry of Justice. Created using SpringBoot and Postgres. Detail page pending.",
+                desc: "Headless RESTful document management microservice for the UK Ministry of Justice. Created using SpringBoot and Postgres.",
                 link: '""',
-                img: "moj.png",
+                img: "link-moj.png",
                 date: "2017",
                 filter: ["software", "java"]
             },
@@ -185,9 +185,11 @@ proto(App, {
         item += '       <h2><a href='+ object.link +'>' + object.name + '</a></h2>';
         item += '       <p>'+ object.desc +'</p>';
         if(!$.inArray('website',object.filter)){
-            item += '   <a class="btn btn-secondary btn-sm" href='+ object.link +' role="button">Go to site</a>'
+            item += '   <a class="btn btn-secondary btn-sm" href='+ object.link +' role="button">See the site <i class="fa fa-external-link" aria-hidden="true"></i></a>'
         } else if(object.link != '""'){
             item += '   <a class="btn btn-secondary btn-sm" href='+ object.link +' role="button">See more details</a>'
+        } else {
+            item += '   <a class="btn btn-secondary btn-sm disabled" href="#" role="button">Details coming soon</a>'
         }
         item += '   </div>';
         item += '</div>';

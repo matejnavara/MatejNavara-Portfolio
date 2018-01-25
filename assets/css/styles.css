@@ -6,6 +6,10 @@ body {
     overflow-y: scroll;
 }
 
+.btn {
+    text-shadow: none !important;
+}
+
 .clearfix {
     box-sizing: border-box;
     padding: 10px 20px;
