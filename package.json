@@ -12,8 +12,8 @@
     "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'",
     "clean": "rimraf dist",
     "copyfonts": "copyfiles -f assets/fonts/* dist/assets/fonts",
-    "imagemin": "imagemin images/* -o dist/images",
-    "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+    "imagemin": "imagemin assets/images/* -o dist/assets/images",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin portfolio_contagion.html -d dist --htmlmin -o dist/portfolio_contagion.html && usemin portfolio_frosty.html -d dist --htmlmin -o dist/portfolio_frosty.html && usemin portfolio_greedy.html -d dist --htmlmin -o dist/portfolio_greedy.html && usemin portfolio_padma.html -d dist --htmlmin -o dist/portfolio_padma.html && usemin portfolio_pplf.html -d dist --htmlmin -o dist/portfolio_pplf.html && usemin portfolio_salg.html -d dist --htmlmin -o dist/portfolio_salg.html && usemin portfolio_sloth.html -d dist --htmlmin -o dist/portfolio_sloth.html && usemin portfolio_tidal.html -d dist --htmlmin -o dist/portfolio_tidal.html",
     "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
   },
   "author": "Matej Navara",

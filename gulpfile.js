@@ -43,9 +43,20 @@ gulp.task('clean', function() {
     return del(['dist']);
 });
 
+//Copy
+
+gulp.task('copyfiles', function() {
+    gulp.src('./partials/*')
+    .pipe(gulp.dest('./dist/partials'));
+    gulp.src('./downloads/*')
+    .pipe(gulp.dest('./dist/downloads'));
+    gulp.src('./assets/content/*')
+    .pipe(gulp.dest('./dist/assets/content'));
+});
+
 gulp.task('copyfonts', function() {
    gulp.src('./assets/fonts/**/*.{ttf,woff,eof,svg}*')
-   .pipe(gulp.dest('./dist/assets/fonts'));
+   .pipe(gulp.dest('./dist/fonts'));
 });
 
 gulp.task('copyfavicon', function() {
@@ -55,7 +66,7 @@ gulp.task('copyfavicon', function() {
 
 // Images
 gulp.task('imagemin', function() {
-    return gulp.src('assets/images/*.{png,jpg,jpeg,gif}')
+    return gulp.src('assets/images/**/*.{png,jpg,jpeg,gif}')
       .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
       .pipe(gulp.dest('dist/assets/images'));
   });
@@ -77,7 +88,7 @@ gulp.task('usemin', function() {
 });
 
 gulp.task('build',['clean'], function() {
-    gulp.start('copyfonts','copyfavicon','imagemin','usemin');
+    gulp.start('copyfiles','copyfonts','copyfavicon','imagemin','usemin');
 });
 
 // Default task
