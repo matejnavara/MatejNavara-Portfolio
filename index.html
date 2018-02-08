@@ -38,7 +38,7 @@
 							<header>
 								<h1>Hi. I'm <strong>Matej Navara</strong>.</h1>
 							</header>
-							<p>I aspire towards awesome software development, whacky creative design and funky techy wonders.</p>
+							<p>I aspire towards awesome software development, whacky creative design and funky technological wonders.</p>
 							<a href="#portfolio" class="button big scrolly">Have a look at my work</a>
 							<a href="#bio" class="button big scrolly">Learn a little about me</a>
 						</div>
@@ -97,7 +97,7 @@
 					</header>
 					<div class="container">
 						<div class="row">
-							<p class="bio-intro">I'm a location independent entrepeneur assisting those in need of tech solutions by day and developing weird/wonderful (usually game-related) projects by night. 
+							<p class="bio-intro">I'm a location independent developer assisting those in need of tech solutions by day and creating weird/wonderful (usually game-related) projects by night. 
 								You'll find me working remotely from a coffeeshop, office or co-working space near you... or not so near you. Regardless I am eager to help in a variety of fields.</p>
 							<div class="4u 12u(mobile)">
 								<section class="box style1">
@@ -233,7 +233,7 @@
 										</div>
 										<li>
 											<a class="collapsed accordion-toggle" data-toggle="collapse" href="#jsCollapse" role="button" aria-expanded="false" aria-controls="jsCollapse">
-												Javascript 
+												Javascript/Typescript
 											</a>
 											<br/><progress value="75" max="100"></progress>
 											
@@ -420,37 +420,10 @@
 			</div>
 
 		<!-- Contact -->
-			<div class="wrapper style4">
-				<article id="contact" class="container 75%">
-					<header>
-						<h2>Say Hello!</h2>
-						<p>Matej.Navara@Gmail.com</p>
-					</header>
-					<div>
-						<div class="row">
-							<div class="12u">
-								<h3>Or find me on ...</h3>
-								<ul class="social">
-									<li><a href="mailto:matej.navara@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
-									<li><a target="_blank" href="https://twitter.com/Matej_Navara" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a target="_blank" href="https://uk.linkedin.com/in/matejnavara" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a target="_blank" href="http://www.facebook.com/matej.navara" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a target="_blank" href="https://github.com/mn98" class="icon fa-github"><span class="label">Github</span></a></li>
-									<li><a target="_blank" href="http://www.greedygull.co.uk/" class="icon fa-users"><span class="label">GreedyGull</span></a></li>
-									<!--<li><a href="#" class="icon fa-skype"><span class="label">Skype</span></a></li>-->
-								</ul>
-								<hr />
-							</div>
-						</div>
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Matej Navara 2018. All rights reserved.</li>
-						</ul>
-					</footer>
-				</article>
-			</div>
+		<div w3-include-html="partials/contact.html"></div>
 
+
+		<!-- Scripts -->
 		<!-- build:js js/bundle.js -->
 		<script type='text/javascript' src="assets/js/jquery.min.js"></script>
 		<script type='text/javascript' src="assets/js/jquery.scrolly.min.js"></script>
@@ -465,11 +438,13 @@
 		<script type='text/javascript' src="assets/js/projectgrid.js"></script>
 		<script type='text/javascript' src="assets/js/util.js"></script>
 		<script type='text/javascript' src="assets/js/main.js"></script>
+		<script type='text/javascript' src="assets/js/w3.js"></script>
 		<!-- endbuild -->
 
 		<script type='text/javascript'>
 
 			$(document).ready(function() {
+				w3.includeHTML();
 				var app = new App();
 				app.init();
 			});

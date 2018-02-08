@@ -71,8 +71,20 @@ select {
     content:"\f067";
 }
 
-.bio-intro {
-    font-size: 20px;
+@media screen and (max-width: 737px) {
+
+    .bio-intro {
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (min-width: 737px) {
+
+    .bio-intro {
+        font-size: 20px;
+    }
+
 }
 
 .industry-role {

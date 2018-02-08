@@ -100,6 +100,14 @@ proto(App, {
                 filter: ["game", "c#"]
             },
             {
+                name: "VR Pharma Project", 
+                desc: "Project for multinational pharmaceutical company simulating the effects of sight disorders in VR. Created in Unity for Oculus VR/Google Cardboard.",
+                link: '""',
+                img: "link-vr.jpg",
+                date: "2016",
+                filter: ["software", "c#", "javascript"]
+            },
+            {
                 name: "Frosty the No Man", 
                 desc: "You are a giant sentient iceberg washed up on a tropical beach. Run as far as you can before you melt. Created in a week whilst sailing the Andaman Sea with American McGee for Pirate Jam 2017.",
                 link: '"portfolio_frosty.html"',
