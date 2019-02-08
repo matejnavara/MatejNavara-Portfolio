@@ -69,8 +69,6 @@
 			len = imgs.length,
 			counter = 0;
 
-			alert("Images length is "+ len);
-
 			[].forEach.call( imgs, function( img ) {
 				img.addEventListener( 'load', incrementCounter, false );
 			} );
@@ -86,7 +84,6 @@
 			setTimeout(function(){
 				app.refreshGrid();
 				$('#asc').val("z_a");
-				alert("New images length is "+ document.images.length);
 			}, 3000);		
 		}
 

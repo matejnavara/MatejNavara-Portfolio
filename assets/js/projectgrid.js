@@ -134,7 +134,8 @@ proto(App, {
             {
                 name: "CloudPusher Website", 
                 desc: "Prototype site for cloud photography social network.",
-                link: '"http://cloudpusher.tk/" target="_blank"',
+                link: '""',
+                // link: '"http://cloudpusher.tk/" target="_blank"',
                 img: "web_cloudpusher.gif",
                 date: "2017",
                 filter: ["website", "javascript"]
@@ -188,11 +189,19 @@ proto(App, {
                 filter: ["website"]
             },
             {
-                name: "Feedr Webapp", 
+                name: "Herbanika Website", 
+                desc: "WordPress online store for international loose tea startup.",
+                link: '"https://herbanika.co/" target="_blank"',
+                img: "link-herbanika.png",
+                date: "2019",
+                filter: ["website"]
+            },
+            {
+                name: "Feedr Web App", 
                 desc: "React based commerce site for fast growing food tech startup.",
                 link: '"https://feedr.co" target="_blank"',
-                img: "/bio/feedr-avatar.png",
-                date: "2019",
+                img: "link-feedr.png",
+                date: "2020",
                 filter: ["website", "software", "javascript"]
             },
         ];
@@ -216,7 +225,7 @@ proto(App, {
         item += '       <a href='+ object.link +' class="image featured"><img src="assets/images/'+ object.img +'" alt="" /></a>';
         item += '       <h2><a href='+ object.link +'>' + object.name + '</a></h2>';
         item += '       <p>'+ object.desc +'</p>';
-        if(!$.inArray('website',object.filter)){
+        if(!$.inArray('website',object.filter && object.link != '""')){
             item += '   <a class="btn btn-secondary btn-sm" href='+ object.link +' role="button">See the site <i class="fa fa-external-link" aria-hidden="true"></i></a>'
         } else if(object.link != '""'){
             item += '   <a class="btn btn-secondary btn-sm" href='+ object.link +' role="button">See more details</a>'
