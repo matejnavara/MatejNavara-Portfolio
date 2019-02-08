@@ -28,7 +28,7 @@ proto(App, {
             class: "item",
             toggle: "scaleWithFade",
             sort: {
-                selected: "z_a",
+                selected: "a_z",
                 a_z: function(first, second, sort) {
                     return sort.byData(first, second, "data-sort");
                 },
@@ -51,14 +51,6 @@ proto(App, {
 
     _createItems: function() {
         var itemsData = [
-            {
-                name: "Tidal Browser Game", 
-                desc: "Created in 8 hours for the EGX Rezzed Creative Assembly Game Jam. Developed using pure Javascript.",
-                link: '"portfolio_tidal.html"',
-                img: "link-tidal.jpg",
-                date: "2016",
-                filter: ["game","javascript"]
-            },
             {
                 name: "Infection Propagation Simulation", 
                 desc: "Healthy cells vs Infected cells. Python simulation using the Pygame framework.",
@@ -108,6 +100,22 @@ proto(App, {
                 filter: ["software", "c#", "javascript"]
             },
             {
+                name: "Tidal Browser Game", 
+                desc: "Created in 8 hours for the EGX Rezzed Creative Assembly Game Jam. Developed using pure Javascript.",
+                link: '"portfolio_tidal.html"',
+                img: "link-tidal.jpg",
+                date: "2016",
+                filter: ["game","javascript"]
+            },
+            {
+                name: "Novana Beauty Website", 
+                desc: "Bespoke website, branding and promotional material for London based beauty studio.",
+                link: '"http://www.novanabeauty.com/" target="_blank"',
+                img: "web_novanabeauty.gif",
+                date: "2016",
+                filter: ["website", "javascript"]
+            },
+            {
                 name: "Frosty the No Man", 
                 desc: "You are a giant sentient iceberg washed up on a tropical beach. Run as far as you can before you melt. Created in a week whilst sailing the Andaman Sea with American McGee for Pirate Jam 2017.",
                 link: '"portfolio_frosty.html"',
@@ -124,12 +132,28 @@ proto(App, {
                 filter: ["game", "c#"]
             },
             {
-                name: "Novana Beauty Website", 
-                desc: "Bespoke website, branding and promotional material for London based beauty studio.",
-                link: '"http://www.novanabeauty.com/" target="_blank"',
-                img: "web_novanabeauty.gif",
-                date: "2016",
+                name: "CloudPusher Website", 
+                desc: "Prototype site for cloud photography social network.",
+                link: '"http://cloudpusher.tk/" target="_blank"',
+                img: "web_cloudpusher.gif",
+                date: "2017",
                 filter: ["website", "javascript"]
+            },
+            {
+                name: "iTracR", 
+                desc: "Commercial timecard and resource management software. Created using Django, MySQL and web technologies.",
+                link: '""',
+                img: "link-itracr.jpg",
+                date: "2017",
+                filter: ["software", "python"]
+            },
+            {
+                name: "Document Management Microservice", 
+                desc: "Headless RESTful document management microservice for the UK Ministry of Justice. Created using SpringBoot and Postgres.",
+                link: '""',
+                img: "link-moj.png",
+                date: "2017",
+                filter: ["software", "java"]
             },
             {
                 name: "Radish Tech Solutions Website", 
@@ -148,28 +172,28 @@ proto(App, {
                 filter: ["website"]
             },
             {
-                name: "CloudPusher Website", 
-                desc: "Prototype site for cloud photography social network.",
-                link: '"http://cloudpusher.tk/" target="_blank"',
-                img: "web_cloudpusher.gif",
-                date: "2017",
-                filter: ["website", "javascript"]
+                name: "Stop That Baby", 
+                desc: "Asymmetric 1 v 1 local multiplayer on one keyboard or with two controllers. Created for Pirate Jam 2018 whilst sailing the Andaman Sea, surviving storms and sipping SamSong.",
+                link: '"https://matejnavara.itch.io/stop-that-baby" target="_blank"',
+                img: "link-baby.jpg",
+                date: "2018",
+                filter: ["game", "c#"]
             },
             {
-                name: "iTracR", 
-                desc: "Commercial timecard and resource management software. Created using Django, MySQL and web technologies.",
-                link: '""',
-                img: "link-itracr.png",
-                date: "2017",
-                filter: ["software", "python"]
+                name: "Stolle Website", 
+                desc: "WordPress e-commerce site for international restaurant chain.",
+                link: '"https://stolleuk.com/" target="_blank"',
+                img: "link-stolle.png",
+                date: "2019",
+                filter: ["website"]
             },
             {
-                name: "Document Management Microservice", 
-                desc: "Headless RESTful document management microservice for the UK Ministry of Justice. Created using SpringBoot and Postgres.",
-                link: '""',
-                img: "link-moj.png",
-                date: "2017",
-                filter: ["software", "java"]
+                name: "Feedr Webapp", 
+                desc: "React based commerce site for fast growing food tech startup.",
+                link: '"https://feedr.co" target="_blank"',
+                img: "/bio/feedr-avatar.png",
+                date: "2019",
+                filter: ["website", "software", "javascript"]
             },
         ];
 
@@ -207,5 +231,9 @@ proto(App, {
 
     _connectItemsToGrid: function() {
         this._grid.appendNew();
+    },
+
+    refreshGrid: function(){
+        this._grid.sort("z_a").resort();
     }
 });

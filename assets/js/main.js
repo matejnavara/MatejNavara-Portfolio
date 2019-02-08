@@ -25,40 +25,72 @@
 		var	$window = $(window),
 			$body = $('body');
 
-		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
+	// Disable animations/transitions until the page has loaded.
+		$body.addClass('is-loading');
 
-			$window.on('load', function() {
-				$body.removeClass('is-loading');
+		$window.on('load', function() {
+			$body.removeClass('is-loading');
+		});
+
+	// Fix: Placeholder polyfill.
+		$('form').placeholder();
+
+	// Prioritize "important" elements on mobile.
+		skel.on('+mobile -mobile', function() {
+			$.prioritize(
+				'.important\\28 mobile\\29',
+				skel.breakpoint('mobile').active
+			);
+		});
+
+	// CSS polyfills (IE<9).
+		if (skel.vars.IEVersion < 9)
+			$(':last-child').addClass('last-child');
+
+	// Scrolly.
+		$window.load(function() {
+
+			var x = parseInt($('.wrapper').first().css('padding-top')) - 100;
+
+			$('#nav a, .scrolly').scrolly({
+				speed: 1000,
+				offset: x
 			});
 
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
+		});
 
-		// Prioritize "important" elements on mobile.
-			skel.on('+mobile -mobile', function() {
-				$.prioritize(
-					'.important\\28 mobile\\29',
-					skel.breakpoint('mobile').active
-				);
-			});
+	//Gridify and W3
+		w3.includeHTML();
+		var app = new App();
+		app.init();
+		if(app){
 
-		// CSS polyfills (IE<9).
-			if (skel.vars.IEVersion < 9)
-				$(':last-child').addClass('last-child');
+			var imgs = document.images,
+			len = imgs.length,
+			counter = 0;
 
-		// Scrolly.
-			$window.load(function() {
+			alert("Images length is "+ len);
 
-				var x = parseInt($('.wrapper').first().css('padding-top')) - 100;
+			[].forEach.call( imgs, function( img ) {
+				img.addEventListener( 'load', incrementCounter, false );
+			} );
 
-				$('#nav a, .scrolly').scrolly({
-					speed: 1000,
-					offset: x
-				});
+			function incrementCounter() {
+				counter++;
+				if ( counter === len ) {
+					app.refreshGrid();
+					$('#asc').val("z_a");
+					console.log( 'All images loaded!' );
+				}
+			}
+			setTimeout(function(){
+				app.refreshGrid();
+				$('#asc').val("z_a");
+				alert("New images length is "+ document.images.length);
+			}, 3000);		
+		}
 
-			});
-
+		
 	});
 
 })(jQuery);
