@@ -181,10 +181,10 @@ proto(App, {
                 filter: ["game", "c#"]
             },
             {
-                name: "Stolle Website", 
-                desc: "WordPress e-commerce site for international restaurant chain.",
+                name: "AFC Website", 
+                desc: "Bespoke showcase site for London based fire and security company.",
                 link: '"https://stolleuk.com/" target="_blank"',
-                img: "link-stolle.png",
+                img: "web_afc.gif",
                 date: "2019",
                 filter: ["website"]
             },
@@ -197,8 +197,8 @@ proto(App, {
                 filter: ["website"]
             },
             {
-                name: "Feedr Web App", 
-                desc: "React based commerce site for fast growing food tech startup.",
+                name: "Feedr", 
+                desc: "React based commerce site and Android/iOS apps for fast growing food tech startup.",
                 link: '"https://feedr.co" target="_blank"',
                 img: "link-feedr.png",
                 date: "2020",
