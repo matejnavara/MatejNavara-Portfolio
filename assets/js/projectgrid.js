@@ -94,7 +94,6 @@ proto(App, {
             {
                 name: "VR Pharma Project", 
                 desc: "Project for multinational pharmaceutical company simulating the effects of sight disorders in VR. Created in Unity for Oculus VR/Google Cardboard.",
-                link: '""',
                 img: "link-vr.jpg",
                 date: "2016",
                 filter: ["software", "c#", "javascript"]
@@ -134,7 +133,6 @@ proto(App, {
             {
                 name: "CloudPusher Website", 
                 desc: "Prototype site for cloud photography social network.",
-                link: '""',
                 // link: '"http://cloudpusher.tk/" target="_blank"',
                 img: "web_cloudpusher.gif",
                 date: "2017",
@@ -151,7 +149,6 @@ proto(App, {
             {
                 name: "Document Management Microservice", 
                 desc: "Headless RESTful document management microservice for the UK Ministry of Justice. Created using SpringBoot and Postgres.",
-                link: '""',
                 img: "link-moj.png",
                 date: "2017",
                 filter: ["software", "java"]
@@ -183,7 +180,7 @@ proto(App, {
             {
                 name: "AFC Website", 
                 desc: "Bespoke showcase site for London based fire and security company.",
-                link: '"https://stolleuk.com/" target="_blank"',
+                link: '"https://afcfire.co.uk/" target="_blank"',
                 img: "web_afc.gif",
                 date: "2019",
                 filter: ["website"]
