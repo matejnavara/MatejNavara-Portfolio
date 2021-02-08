@@ -1,0 +1,52 @@
+{
+  "name": "MatejNavara",
+  "version": "1.0.1",
+  "description": "This is a website for Matej Navara",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "scss": "node-sass -o assets/css/ assets/css/",
+    "watch:scss": "onchange 'assets/css/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f assets/fonts/* dist/assets/fonts",
+    "imagemin": "imagemin assets/images/* -o dist/assets/images",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin portfolio_contagion.html -d dist --htmlmin -o dist/portfolio_contagion.html && usemin portfolio_frosty.html -d dist --htmlmin -o dist/portfolio_frosty.html && usemin portfolio_greedy.html -d dist --htmlmin -o dist/portfolio_greedy.html && usemin portfolio_padma.html -d dist --htmlmin -o dist/portfolio_padma.html && usemin portfolio_pplf.html -d dist --htmlmin -o dist/portfolio_pplf.html && usemin portfolio_salg.html -d dist --htmlmin -o dist/portfolio_salg.html && usemin portfolio_sloth.html -d dist --htmlmin -o dist/portfolio_sloth.html && usemin portfolio_tidal.html -d dist --htmlmin -o dist/portfolio_tidal.html",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
+  },
+  "author": "Matej Navara",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "cssmin": "^0.4.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-flatmap": "^1.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-rev": "^8.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-usemin": "^0.3.28",
+    "htmlmin": "0.0.7",
+    "include-media": "^1.4.9",
+    "lite-server": "^2.4.0",
+    "node-sass": "^4.11.0",
+    "onchange": "^3.3.0",
+    "parallelshell": "^3.0.2",
+    "rimraf": "^2.6.2",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.5.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "font-awesome": "^4.7.0",
+    "gridifier": "^2.0.3",
+    "jquery": "^3.2.1",
+    "natives": "^1.1.6",
+    "tether": "^1.4.3"
+  }
+}

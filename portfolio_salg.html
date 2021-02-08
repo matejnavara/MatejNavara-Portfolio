@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Matej Navara's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<!-- build:css css/bundle.css -->
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/styles.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- endbuild -->
+	</head>
+	<body>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="index.html#top"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a></li>
+					<li><a href="index.html#portfolio"><i class="fa fa-book fa-fw"></i>&nbsp; Portfolio</a></li>
+					<li><a href="index.html#bio"><i class="fa fa-user fa-fw"></i>&nbsp; Bio</a></li>
+					<li><a href="#contact"><i class="fa fa-pencil fa-fw"></i>&nbsp; Contact</a></li>
+				</ul>
+			</nav>
+
+		
+		<!-- Portfolio -->
+			<div class="wrapper style3">
+				<article id="portfolio">
+					<header>
+						<h2>Super Awesome Line Game</h2>
+						<p>The first published Android app from Greedy Gulls Studio. Developed in Java using the LibGDX framework.</p>
+					</header>
+					
+					<!-- #region Jssor Slider Begin -->
+
+									<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
+										<!-- Loading Screen -->
+										<div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+										<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+										<div style="position:absolute;display:block;background:url('assets/images/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+										</div>
+										<div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
+											<div data-p="112.50" style="display: none;">
+											<img data-u="image" src="assets/images/salg/1.png" />
+											</div>
+											<div data-p="112.50" style="display: none;">
+											<img data-u="image" src="assets/images/salg/2.png" />
+											</div>
+											<div data-p="112.50" style="display: none;">
+											<img data-u="image" src="assets/images/salg/3.png" />
+											</div>
+											<div data-p="112.50" style="display: none;">
+											<img data-u="image" src="assets/images/salg/4.png" />
+											</div>
+										</div>
+										<!-- Bullet Navigator -->
+										<div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">
+										<div data-u="prototype" style="width:12px;height:12px;"></div>
+										</div>
+										<!-- Arrow Navigator -->
+										<span data-u="arrowleft" class="jssora02l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+										<span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+									</div>
+								
+								<section class="content">
+									<hr/>
+									<h2>Overview</h2>
+									<br/>
+
+									<div class="row text-left">
+										<div class="col-3">
+											<p><b>Platform:</b> Android</p>
+											<p><b>Language:</b> Java</p>
+											<p><b>Tech:</b> LibGDX</p>
+											<p><b>Team Size:</b> 4</p>
+											<p><b>Created:</b> 2014</p>
+										</div>
+										<div class="col-9">
+											<p>Challenge your reflexes as you tap away to navigate the line along it's path. Simple though it sounds the difficulty quickly increases and you'll need to hold out under the ever increasing pressure. Levels will vary in style as you play through the traditional Arcade mode. Or see how long you can last in the Classic mode.</p>
+											<p>This was the first released project from Greedy Gull Studios. Development was shared amongst all 4 members each of which assisted with the design, programming and deployment of the title. We chose LibGDX as the Java framework in which to develop the game due to the proposed multiplatform capabilities of the framework. Unfortunately during development Apple introduced their Swift programming language for all devices which was not compatible with the LibGDX framework at the time. Thus an IOS version of the app was never released.</p>
+											<p>Greedy Gull Studios are still looking into re-creating the game from scratch within Unity to ensure release on all mobile devices as originally intended.</p>
+										</div>
+									</div>
+
+									<h4>Download: </h4>
+									<a target="_blank" href="https://play.google.com/store/apps/details?id=uk.co.greedygull.Game">
+										<img alt="Android app on Google Play" class="image fit" src="assets/images/google-play-store-badge.png">
+									</a>
+									<hr/>
+								</section>
+					
+				</article>
+			</div>
+			
+
+		<!-- Contact -->
+		<div w3-include-html="partials/contact.html"></div>
+
+
+		<!-- Scripts -->
+		<!-- build:js js/bundle.js -->
+		<script type='text/javascript' src="assets/js/jquery.min.js"></script>
+		<script type='text/javascript' src="assets/js/jquery.scrolly.min.js"></script>
+		<script type='text/javascript' src="assets/js/skel.min.js"></script>
+		<script type='text/javascript' src="assets/js/skel-viewport.min.js"></script>
+		<!-- <script type='text/javascript' src="node_modules/tether/dist/js/tether.min.js"></script> -->
+		<!-- <script type='text/javascript' src="js/popper.min.js"></script> -->
+		<script type='text/javascript' src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type='text/javascript' src="node_modules/gridifier/dist/gridifier.min.js"></script>
+		<script type='text/javascript' src="assets/js/modernizr.custom.js"></script>
+		<script type='text/javascript' src="assets/js/proto.js"></script>
+		<script type='text/javascript' src="assets/js/projectgrid.js"></script>
+		<script type='text/javascript' src="assets/js/util.js"></script>
+		<script type='text/javascript' src="assets/js/main.js"></script>
+		<script type='text/javascript' src="assets/js/jssor.js"></script>
+		<script type='text/javascript' src="assets/js/w3.js"></script>
+		<!-- endbuild -->
+
+		<script>
+			jssor_1_slider_init();
+			w3.includeHTML();
+		</script>
+	</body>
+</html>

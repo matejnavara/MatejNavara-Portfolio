@@ -5,12 +5,15 @@
 		<title>Matej Navara's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<!-- build:css css/bundle.css -->
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="shortcut icon" href="images/icon.ico">
-		
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!-- endbuild -->
+
 	</head>
 	<body>
 
@@ -29,13 +32,13 @@
 				<article class="container" id="top">
 					<div class="row">
 						<div class="4u 12u(mobile)">
-							<span class="image fit"><img src="images/profile.gif" alt="" /></span>
+							<span class="image fit"><img src="assets/images/profile.gif" alt="" /></span>
 						</div>
 						<div class="8u 12u(mobile)">
 							<header>
 								<h1>Hi. I'm <strong>Matej Navara</strong>.</h1>
 							</header>
-							<p>I aspire towards awesome software development, whacky game design and funky techy wonders.</p>
+							<p>I aspire towards awesome software development, whacky creative design and funky technological wonders.</p>
 							<a href="#portfolio" class="button big scrolly">Have a look at my work</a>
 							<a href="#bio" class="button big scrolly">Learn a little about me</a>
 						</div>
@@ -52,58 +55,34 @@
 					</header>
 					<div class="container">
 						<div class="row">
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="portfolio_whodunnit-padma.html" class="image featured"><img src="images/pic06b.jpg" alt="" /></a>
-									<h3><a href="portfolio_whodunnit-padma.html">Whodunit Padma</a></h3>
-									<p>Play as Padma, the ship's AI, in this sci-fi murder mystery short listed for the Tranzfuser Fund 2016. Developed in 3 months using Unity/C#/Ink.</p>
-								</article>
+							<!-- Controls -->
+							<div class="clearfix">
+								<div class="pull-left">
+									<h4>View:</h4>
+								</div>
+								
+								<div class="pull-right">
+									<select id="asc">
+										<option value="a_z">Oldest</option>
+										<option value="z_a" selected>Latest</option>
+									</select>
+				
+									<select id="filter">
+										<option value="all" selected>All</option>
+										<option value="game">Games</option>
+										<option value="software">Software</option>
+										<option value="website">Websites</option>
+										<option></option>
+										<option value="java">Java</option>
+										<option value="c#">C#</option>
+										<option value="python">Python</option>
+										<option value="javascript">JavaScript</option>
+									</select>
+								</div>
 							</div>
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="portfolio_procedural-puzzle-level-framework.html" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-									<h3><a href="portfolio_procedural-puzzle-level-framework.html">Procedural Puzzle Level Generation</a></h3>
-									<p>Final year project for Computer Science (Games) BSc Hons at the University of Brighton. Developed using Unity and C#/Javascript.</p>
-								</article>
-							</div>
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="portfolio_greedy-gull-game.html" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-									<h3><a href="portfolio_greedy-gull-game.html">Greedy Gull Game</a></h3>
-									<p>Early prototype of the Greedy Gull game created in Java using the LibGDX framework.</p>
-								</article>
-							</div>
-						</div>
-						<div class="row">
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="portfolio_super-awesome-line-game.html" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-									<h3><a href="portfolio_super-awesome-line-game.html">Super Awesome Line Game</a></h3>
-									<p>The first published Android app from our Greedy Gulls Studio. Developed in Java using the LibGDX framework.</p>
-								</article>
-							</div>
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="portfolio_infection-simulation.html" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-									<h3><a href="portfolio_infection-simulation.html">Infection Propagation Simulation</a></h3>
-									<p>Healthy cells vs Infected cells. Python simulation using the Pygame framework.</p>
-								</article>
-							</div>
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="portfolio_tidal-game.html" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-									<h3><a href="portfolio_tidal-game.html">Tidal Browser Game</a></h3>
-									<p>Created in 8 hours for the EGX Rezzed Creative Assembly Game Jam. Developed using pure Javascript.</p>
-								</article>
-							</div>
-						</div>
-						<div class="row">
-							<div class="4u 12u(mobile)">
-								<article class="box style2">
-									<a href="#" class="image featured"><img src="images/pic0.jpg" alt="" /></a>
-									<h3><a href="#"></a></h3>
-									<p>This portfolio is still under development so please be patient for further content.</p>
-								</article>
+				
+							<!-- Projects Grid -->
+							<div class="projects grid" style="width:100%">
 							</div>
 						</div>
 					</div>
@@ -118,38 +97,113 @@
 					</header>
 					<div class="container">
 						<div class="row">
+							<p class="bio-intro">I'm a location independent developer assisting those in need of tech solutions by day and creating weird/wonderful (usually game related) projects by night. 
+								You'll find me working remotely from a coffee shop, office or co-working space near you... or not so near you. Regardless I am eager to help in a variety of fields.</p>
 							<div class="4u 12u(mobile)">
 								<section class="box style1">
-									<span class="icon featured fa-graduation-cap"></span>
-									<h2>Personal Profile</h2>
+									<span class="icon featured fa fa-briefcase"></span>
+									<h2>Industry Experience</h2>
 									<hr/>
-									<p>Matej Navara is an aspiring game developer based in London. Recently he graduated with a BSc Hons in Computer Science (Games) from the University of Brighton. During this time he studied a wide range of subject areas from web development to artificial intelligence, all while maintaining various jobs outside of university in different industries. During the third year he created a small development studio with three other students to form Greedy Gull Studios (<a target="_blank" href="http://www.greedygull.co.uk">www.GreedyGull.co.uk</a>).</p>
-									<p>Now after graduating and taking a well deserved few months travelling Matej is eager to begin his journey into the industry he has sought after since childhood. Although not yet specialized in a particular field he is eager to continue learning and spends much of his free time developing skills in key applications and programming languages.</p>
-									<h4>CV: <a target="_blank" href="downloads/MatejNavara_cv.pdf" class="icon fa-file-pdf-o fa-2x"></a></h4>
-								</section>
-							</div>
-							<div class="4u 12u(mobile)" text-align="right">
-								<section class="box style1">
-									<span class="icon featured fa-desktop"></span>
-									<h2>Software Experience</h2>
-									<hr/>
-									<h3><ul>
-									<li>Eclipse</li>
-									<li>IntelliJ</li>
-									<li>Visual Studio</li>
-									<li>Android Studio</li>
-									<li>Unity</li>
-									<li>Unreal Engine</li>
-									<li>3DS Max</li>
-									<li>Blender</li>
-									<li>Adobe Creative Suite</li>
-									<li>Microsoft Office</li>
-									<li>Apache Servicemix</li>
-									<li>Amazon Web Services</li>
-									<li>Jenkins</li>
-									<li>JIRA</li>
-									<li>GIT</li>
-									</ul></h3>
+									<div class="industry-role card">
+										<div class="card-block">
+											<h5 class="card-title align-middle">
+												<img src="assets/images/bio/feedr-avatar.png" alt="avatar" class="avatar image"> 
+												Feedr
+											</h5>
+											<h4>React Developer</h4>
+											<i>Mar 2018 - Present</i>
+											</br>
+											<hr>
+											<a class="collapsed accordion-toggle" data-toggle="collapse" href="#feedrCollapse" role="button" aria-expanded="false" aria-controls="feedrCollapse">
+												Role details
+											</a>
+											<div class="collapse multi-collapse" id="feedrCollapse">
+												<p>Software development within a small team on a fast growing food tech startup. Full stack development on a PERN stack project. As well as React Native development of iOS/Android app.</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="industry-role card">
+										<div class="card-block">
+											<h5 class="card-title align-middle">
+												<img src="assets/images/bio/radish-avatar.png" alt="avatar" class="avatar image"> 
+												Radish Ltd.
+											</h5>
+											<h4>Technical Director</h4>
+											<i>Nov 2017 - Present</i>
+											</br>											
+											<hr>
+											<a class="collapsed accordion-toggle" data-toggle="collapse" href="#radCollapse" role="button" aria-expanded="false" aria-controls="radCollapse">
+												Role details
+											</a>
+											<div class="collapse multi-collapse" id="radCollapse">
+												<p>Contracting remotely within web/app/software development and consultancy.</p>
+												<p>Radish Tech Solutions are able to accept varying size contracts from companies and individuals alike. These contracts can involve any combination of consulting, design, development, hosting or maintenance for websites, web apps, mobile apps or bespoke software. </p>
+											</div>
+										</div>
+									</div>
+
+									<div class="industry-role card">
+										<div class="card-block">
+											<h5 class="card-title align-middle">
+												<img src="assets/images/bio/solirius-avatar.jpg" alt="avatar" class="avatar image"> 
+												Solirius Consulting
+											</h5>
+											<h4>Software Engineer</h4>
+											<i>May 2016 - Nov 2017</i>
+											</br>											
+											<hr>
+											<a class="collapsed accordion-toggle" data-toggle="collapse" href="#solCollapse" role="button" aria-expanded="false" aria-controls="solCollapse">
+												Role details
+											</a>
+											<div class="collapse multi-collapse" id="solCollapse">
+												<p>Software development across a number of private and public sector projects. I have experienced projects at all stages of their lifecycle from inital design and MVP builds to large scale enterprise solutions with high MAU.</p>
+												<p>As well as development I have held various responsibilities including leading projects, meeting external clients and running agile processes as a scrum-master.</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="industry-role card">
+										<div class="card-block">
+											<h5 class="card-title align-middle">
+												<img src="assets/images/bio/gull-avatar.png" alt="avatar" class="avatar image"> 
+												Greedy Gull Studios
+											</h5>
+											<h4>Game Developer</h4>
+											<i>Sep 2013 - Oct 2016</i>
+											</br>											
+											<hr>
+											<a class="collapsed accordion-toggle" data-toggle="collapse" href="#gullCollapse" role="button" aria-expanded="false" aria-controls="gullCollapse">
+												Role details
+											</a>
+											<div class="collapse multi-collapse" id="gullCollapse">
+												<p>An independent app development studio creating cross-platform games for PC, Android and web. Our shared roles involved everything from initial conceptualisation/design to programming/testing and finally deployment and ongoing marketing/support.</p>
+												<p>Our games were predominantly developed in LibGDX (Java) or Unity (C#).</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="industry-role card">
+										<div class="card-block">
+											<h5 class="card-title align-middle">
+												<img src="assets/images/bio/ideal-avatar.png" alt="avatar" class="avatar image"> 
+												Ideal Ltd.
+											</h5>
+											<h4>Service Analyst</h4>
+											<i>Feb 2014 - Sep 2015</i>
+											</br>											
+											<hr>
+											<a class="collapsed accordion-toggle" data-toggle="collapse" href="#idealCollapse" role="button" aria-expanded="false" aria-controls="idealCollapse">
+												Role details
+											</a>
+											<div class="collapse multi-collapse" id="idealCollapse">
+												<p>Monitoring Cisco network and telephony systems, primarily supporting P&O Ferries as well as other B2B clients. Providing first line support to analyse the priority/severity of any given incident and react accordingly.</p>
+											</div>
+										</div>
+									</div>
+
+									<p>Find more details <a target="_blank" href="https://uk.linkedin.com/in/matejnavara">HERE</a>.</p>
+									
 								</section>
 							</div>
 							<div class="4u 12u(mobile)">
@@ -157,17 +211,235 @@
 									<span class="icon featured fa-comments-o"></span>
 									<h2>Language Experience</h2>
 									<hr/>
-									<h3><ul>
-									<li>Java<br/> <progress value="70" max="100"></progress></li>
-									<li>C#<br/><progress value="70" max="100"></progress></li>
-									<li>C++<br/><progress value="40" max="100"></progress></li>
-									<li>Python<br/><progress value="90" max="100"></progress></li>
-									<li>Django<br/><progress value="80" max="100"></progress></li>
-									<li>HTML/CSS<br/><progress value="80" max="100"></progress></li>
-									<li>Javascript<br/><progress value="70" max="100"></progress></li>
-									<li>jQuery<br/><progress value="50" max="100"></progress></li>
-									<li>Bootstrap<br/><progress value="70" max="100"></progress></li>
-									</ul></h3>																		
+									<h4><ul>
+										<li>
+											<a class="collapsed accordion-toggle" data-toggle="collapse" href="#htmlCollapse" role="button" aria-expanded="false" aria-controls="htmlCollapse">
+												HTML/CSS 
+											</a>
+											<br/><progress value="90" max="100"></progress>
+										</li>
+										<div class="collapse" id="htmlCollapse">
+											<div class="card card-body">
+												<li>Bootstrap<br/> <progress value="90" max="100"></progress></li>
+												<li>Sass<br/> <progress value="80" max="100"></progress></li>
+											</div>
+										</div>
+										<li>
+											<a class="collapsed accordion-toggle" data-toggle="collapse" href="#jsCollapse" role="button" aria-expanded="false" aria-controls="jsCollapse">
+												Javascript/Typescript
+											</a>
+											<br/><progress value="85" max="100"></progress>
+											
+										</li>
+										<div class="collapse" id="jsCollapse">
+											<div class="card card-body">
+												<li>React<br/> <progress value="85" max="100"></progress></li>
+												<li>React Native<br/> <progress value="75" max="100"></progress></li>
+												<li>jQuery<br/> <progress value="70" max="100"></progress></li>
+												<li>Angular<br/> <progress value="60" max="100"></progress></li>
+												<li>NodeJS<br/> <progress value="60" max="100"></progress></li>
+												<li>Express<br/> <progress value="55" max="100"></progress></li>
+												<li>Ionic<br/> <progress value="50" max="100"></progress></li>
+											</div>
+										</div>
+										<li>
+											<a class="collapsed accordion-toggle" data-toggle="collapse" href="#pythonCollapse" role="button" aria-expanded="false" aria-controls="pythonCollapse">
+												Python
+											</a>
+											<br/> <progress value="80" max="100"></progress>
+										</li>
+										<div class="collapse" id="pythonCollapse">
+											<div class="card card-body">
+												<li>Django<br/> <progress value="70" max="100"></progress></li>
+												<li>Pygame<br/> <progress value="60" max="100"></progress></li>
+											</div>
+										</div>
+										<li>
+											<a class="collapsed accordion-toggle" data-toggle="collapse" href="#javaCollapse" role="button" aria-expanded="false" aria-controls="javaCollapse">
+												Java
+											</a>
+											<br/> <progress value="70" max="100"></progress>
+										</li>
+										<div class="collapse" id="javaCollapse">
+											<div class="card card-body">
+												<li>Springboot<br/> <progress value="55" max="100"></progress></li>
+												<li>Groovy<br/> <progress value="50" max="100"></progress></li>
+												<li>LibGDX<br/> <progress value="45" max="100"></progress></li>
+												<li>Camel<br/> <progress value="30" max="100"></progress></li>
+											</div>
+										</div>
+										<li>C#<br/><progress value="70" max="100"></progress></li>
+										<li>C++<br/><progress value="40" max="100"></progress></li>
+										<li>Ruby<br/><progress value="40" max="100"></progress></li>
+									</ul></h4>																		
+								</section>
+							</div>
+
+							
+							<div class="4u 12u(mobile)" text-align="right">
+								<section class="box style1">
+									<span class="icon featured fa-desktop"></span>
+									<h2>Technology Experience</h2>
+									<hr/>
+
+									<ul id="accordion">
+										<!-- Build tools -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="mb-0">
+													<a class="collapsed accordion-toggle-2" data-toggle="collapse" href="#buildCollapse" role="button" aria-expanded="false" aria-controls="buildCollapse">
+														Build Tools
+													</a>
+												</h5>
+											</div>
+											<div class="collapse" id="buildCollapse" data-parent="#accordion">
+												<li>NPM</li>
+												<li>Gulp</li>
+												<li>Grunt</li>
+												<li>Maven</li>
+												<li>Buck</li>
+												<li>Gradle</li>
+												<li>CocaoPods</li>
+											</div>
+										</div>
+										<!-- Configuration tools -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="mb-0">
+													<a class="collapsed accordion-toggle-2" data-toggle="collapse" href="#confCollapse" role="button" aria-expanded="false" aria-controls="confCollapse">
+														Deployment Tools
+													</a>
+												</h5>
+											</div>
+											<div class="collapse" id="confCollapse" data-parent="#accordion">
+												<li>Ansible</li>
+												<li>Salt Stack</li>
+												<li>Chef</li>
+												<li>Puppet</li>
+												<li>Jenkins</li>
+											</div>
+										</div>
+										<!-- Environment tools -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="mb-0">
+													<a class="collapsed accordion-toggle-2" data-toggle="collapse" href="#envCollapse" role="button" aria-expanded="false" aria-controls="envCollapse">
+														Environment Tools
+													</a>
+												</h5>
+											</div>
+											<div class="collapse" id="envCollapse" data-parent="#accordion">
+												<li>Docker</li>
+												<li>Vagrant</li>
+												<li>AWS</li>
+												<li>Azure</li>
+												<li>AppCenter</li>
+											</div>
+										</div>
+										<!-- Content Management Systems -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="mb-0">
+													<a class="collapsed accordion-toggle-2" data-toggle="collapse" href="#cmsCollapse" role="button" aria-expanded="false" aria-controls="cmsCollapse">
+														Content Management Systems
+													</a>
+												</h5>
+											</div>
+											<div class="collapse" id="cmsCollapse" data-parent="#accordion">
+												<li>Sharepoint</li>
+												<li>WordPress</li>
+											</div>
+										</div>
+										<!-- Testing Tools -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="mb-0">
+													<a class="collapsed accordion-toggle-2" data-toggle="collapse" href="#testCollapse" role="button" aria-expanded="false" aria-controls="testCollapse">
+														Testing Tools
+													</a>
+												</h5>
+											</div>
+											<div class="collapse" id="testCollapse" data-parent="#accordion">
+												<li>Jest</li>
+												<li>JUnit</li>
+												<li>OWASP</li>
+												<li>SpringBootTest</li>
+												<li>Cucumber</li>
+												<li>Selenium</li>
+												<li>Mockito</li>
+											</div>
+										</div>
+										<!-- Database Tools -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="mb-0">
+													<a class="collapsed accordion-toggle-2" data-toggle="collapse" href="#dbCollapse" role="button" aria-expanded="false" aria-controls="dbCollapse">
+														Database Tools
+													</a>
+												</h5>
+											</div>
+											<div class="collapse" id="dbCollapse" data-parent="#accordion">
+												<li>Postgres</li>
+												<li>MySQL</li>
+												<li>Redis</li>
+												<li>MongoDB</li>
+												<li>Liquibase</li>
+											</div>
+										</div>
+										<!-- Analytics Tools -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="mb-0">
+													<a class="collapsed accordion-toggle-2" data-toggle="collapse" href="#analyticCollapse" role="button" aria-expanded="false" aria-controls="analyticCollapse">
+														Analytics Tools
+													</a>
+												</h5>
+											</div>
+											<div class="collapse" id="analyticCollapse" data-parent="#accordion">
+												<li>Elasticsearch</li>
+												<li>Logstash</li>
+												<li>Kibana</li>
+												<li>Splunk</li>
+												<li>Google Analytics</li>
+											</div>
+										</div>
+										<!-- Game Dev/3D Tools -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="mb-0">
+													<a class="collapsed accordion-toggle-2" data-toggle="collapse" href="#gameCollapse" role="button" aria-expanded="false" aria-controls="gameCollapse">
+														Game Dev Tools
+													</a>
+												</h5>
+											</div>
+											<div class="collapse" id="gameCollapse" data-parent="#accordion">
+												<li>Unity</li>
+												<li>Unreal</li>
+												<li>Cry Engine</li>
+												<li>3DS Max</li>
+												<li>Maya</li>
+												<li>Blender</li>
+											</div>
+										</div>
+										<!-- Other Tools -->
+										<div class="card">
+											<div class="card-header">
+												<h5 class="mb-0">
+													<a class="collapsed accordion-toggle-2" data-toggle="collapse" href="#miscCollapse" role="button" aria-expanded="false" aria-controls="miscCollapse">
+														Other Tools
+													</a>
+												</h5>
+											</div>
+											<div class="collapse" id="miscCollapse" data-parent="#accordion">
+												<li>GIT</li>
+												<li>JIRA</li>
+												<li>Confluence</li>
+												<li>Adobe Creative Suite</li>
+												<li>Microsoft Office</li>
+												<li>Paint</li>
+											</div>
+										</div>
+									</ul>
 								</section>
 							</div>
 						</div>
@@ -176,45 +448,26 @@
 			</div>
 
 		<!-- Contact -->
-			<div class="wrapper style4">
-				<article id="contact" class="container 75%">
-					<header>
-						<h2>Say Hello!</h2>
-						<p>Matej.Navara@Gmail.com</p>
-					</header>
-					<div>
-						<div class="row">
-							<div class="12u">
-								<h3>Or find me on ...</h3>
-								<ul class="social">
-									<li><a href="mailto:matej.navara@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
-									<li><a target="_blank" href="https://twitter.com/Matej_Navara" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a target="_blank" href="https://uk.linkedin.com/in/matejnavara" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a target="_blank" href="http://www.facebook.com/matej.navara" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a target="_blank" href="https://github.com/mn98" class="icon fa-github"><span class="label">Github</span></a></li>
-									<li><a target="_blank" href="http://www.greedygull.co.uk/" class="icon fa-users"><span class="label">GreedyGull</span></a></li>
-									<!--<li><a href="#" class="icon fa-skype"><span class="label">Skype</span></a></li>-->
-								</ul>
-								<hr />
-							</div>
-						</div>
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Matej Navara 2017. All rights reserved.</li>
-						</ul>
-					</footer>
-				</article>
-			</div>
+		<div w3-include-html="partials/contact.html"></div>
+
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/skel-viewport.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+		<!-- build:js js/bundle.js -->
+		<script type='text/javascript' src="assets/js/jquery.min.js"></script>
+		<script type='text/javascript' src="assets/js/jquery.scrolly.min.js"></script>
+		<script type='text/javascript' src="assets/js/skel.min.js"></script>
+		<script type='text/javascript' src="assets/js/skel-viewport.min.js"></script>
+		<!-- <script type='text/javascript' src="node_modules/tether/dist/js/tether.min.js"></script> -->
+		<!-- <script type='text/javascript' src="js/popper.min.js"></script> -->
+		<script type='text/javascript' src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type='text/javascript' src="node_modules/gridifier/dist/gridifier.min.js"></script>
+		<script type='text/javascript' src="assets/js/modernizr.custom.js"></script>
+		<script type='text/javascript' src="assets/js/proto.js"></script>
+		<script type='text/javascript' src="assets/js/projectgrid.js"></script>
+		<script type='text/javascript' src="assets/js/util.js"></script>
+		<script type='text/javascript' src="assets/js/main.js"></script>
+		<script type='text/javascript' src="assets/js/w3.js"></script>
+		<!-- endbuild -->
 
 	</body>
 </html>
