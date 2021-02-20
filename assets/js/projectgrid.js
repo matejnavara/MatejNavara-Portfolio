@@ -269,6 +269,15 @@ proto(App, {
         filter: ["website"],
         weblink: true,
       },
+      {
+        name: "Expired News",
+        desc: "Historic New York Times web app built using React/NextJS/Vercel",
+        link: '"https://expired.news/" target="_blank"',
+        img: "web_news.gif",
+        date: "2021",
+        filter: ["website, software"],
+        weblink: true,
+      },
     ];
 
     for (var i = 0; i < itemsData.length; i++) this._createItem(itemsData[i]);
