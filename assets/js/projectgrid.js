@@ -275,7 +275,7 @@ proto(App, {
         link: '"https://expired.news/" target="_blank"',
         img: "web_news.gif",
         date: "2021",
-        filter: ["website, software"],
+        filter: ["website", "software"],
         weblink: true,
       },
     ];
