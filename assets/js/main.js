@@ -59,7 +59,7 @@
     var app = new App();
     app.init();
     if (app) {
-      window.addEventListener("load", () => {
+      window.addEventListener("load", function () {
         app.refreshGrid();
         $("#asc").val("z_a");
       });
