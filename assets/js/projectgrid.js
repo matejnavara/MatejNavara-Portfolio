@@ -59,6 +59,9 @@ proto(App, {
         javascript: function (item) {
           return $(item).hasClass("javascript");
         },
+        typescript: function (item) {
+          return $(item).hasClass("typescript");
+        },
       },
     });
   },
@@ -259,6 +262,29 @@ proto(App, {
         filter: ["website", "software"],
         //weblink: true,
       },
+      {
+        name: "ThinkNinja Mobile App",
+        desc: "Medical device mobile apps for adults with epilepsy and children with autism build in React Native",
+        img: "app_thinkninja.jpeg",
+        date: "2022",
+        filter: ["software", "typescript"],
+      },
+      {
+        name: "Constructionline Platform",
+        desc: "Largest European construction compliance marketplace, built across numerous microservices",
+        img: "web_constructionline.png",
+        date: "2023",
+        filter: ["software", "typescript"],
+      },
+      {
+        name: "Rocket Squid",
+        desc: "Interactive learning and support platform for small businesses, built in NextJS 14",
+        img: "web_rocketsquid.png",
+        date: "2023",
+        filter: ["website", "typescript"],
+        link: '"https://rocketsquid.tech/" target="_blank"',
+        weblink: true,
+      },
     ];
 
     for (var i = 0; i < itemsData.length; i++) this._createItem(itemsData[i]);
@@ -290,6 +316,7 @@ proto(App, {
     item +=
       "       <h2><a href=" + object.link + ">" + object.name + "</a></h2>";
     item += "       <p>" + object.desc + "</p>";
+    item += "       <small>" + object.date + "</small>";
     if (
       (!$.inArray("website", object.filter) || object.weblink) &&
       object.link != null
