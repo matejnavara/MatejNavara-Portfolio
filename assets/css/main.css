@@ -1880,6 +1880,16 @@ ul.social li a.fa-vimeo {
   background-color: #4c8ab0;
 }
 
+/* Radish */
+ul.social li a.fa-laptop {
+  background-color: #d73c66;
+}
+
+/* RocketSquid */
+ul.social li a.fa-rocket {
+  background-color: #fe7900;
+}
+
 ul.social li a:hover {
   top: -5px;
 }
