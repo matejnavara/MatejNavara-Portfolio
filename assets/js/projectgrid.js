@@ -162,6 +162,7 @@ proto(App, {
         img: "link-itracr.jpg",
         date: "2017",
         filter: ["website", "software", "python"],
+        weblink: true,
       },
       {
         name: "Document Management Microservice",
@@ -184,6 +185,7 @@ proto(App, {
         img: "web_radish.gif",
         date: "2018",
         filter: ["website", "javascript"],
+        weblink: true,
       },
       {
         name: "Anastasiia Golovina Website",
@@ -192,6 +194,7 @@ proto(App, {
         img: "web_anastasiiagolovina.gif",
         date: "2018",
         filter: ["website"],
+        weblink: true,
       },
       {
         name: "Stop That Baby",
@@ -217,6 +220,7 @@ proto(App, {
         img: "link-herbanika.png",
         date: "2019",
         filter: ["website"],
+        weblink: true,
       },
       {
         name: "Feedr",
@@ -225,6 +229,7 @@ proto(App, {
         img: "link-feedr.png",
         date: "2020",
         filter: ["website", "software", "javascript"],
+        weblink: true,
       },
       {
         name: "Messy Crossings",
@@ -263,15 +268,22 @@ proto(App, {
         //weblink: true,
       },
       {
-        name: "ThinkNinja Mobile App",
-        desc: "Medical device mobile apps for adults with epilepsy and children with autism build in React Native",
+        name: "ThinkNinja Android/iOS App",
+        desc: "Mental health mobile app for young people, built in React Native",
         img: "app_thinkninja.jpeg",
+        date: "2021",
+        filter: ["software", "typescript"],
+      },
+      {
+        name: "ThinkNinja for Epilepsy App",
+        desc: "Medical device mobile app for adults with epilepsy, built in React Native",
+        img: "app_thinkninja-epilepsy.jpeg",
         date: "2022",
         filter: ["software", "typescript"],
       },
       {
         name: "Constructionline Platform",
-        desc: "Largest European construction compliance marketplace, built across numerous microservices",
+        desc: "Largest European construction compliance marketplace, complex microservices based project",
         img: "web_constructionline.png",
         date: "2023",
         filter: ["software", "typescript"],
@@ -280,7 +292,7 @@ proto(App, {
         name: "Rocket Squid",
         desc: "Interactive learning and support platform for small businesses, built in NextJS 14",
         img: "web_rocketsquid.png",
-        date: "2023",
+        date: "2024",
         filter: ["website", "typescript"],
         link: '"https://rocketsquid.tech/" target="_blank"',
         weblink: true,
@@ -307,16 +319,20 @@ proto(App, {
       data +
       ">";
     item += '   <div class="box style2">';
+    item += object.weblink
+      ? "<a href=" + object.link + ' class="image featured">'
+      : '<div class="image featured">';
+
+    item += '<img src="assets/images/' + object.img + '" alt="" />';
+    item += object.weblink ? "</a>" : "</div>";
     item +=
-      "       <a href=" +
+      "       <h2 style='margin-bottom: 0;'><a href=" +
       object.link +
-      ' class="image featured"><img src="assets/images/' +
-      object.img +
-      '" alt="" /></a>';
-    item +=
-      "       <h2><a href=" + object.link + ">" + object.name + "</a></h2>";
+      ">" +
+      object.name +
+      "</a></h2>";
+    item += "       <p style='margin-bottom: 1em;'>" + object.date + "</p>";
     item += "       <p>" + object.desc + "</p>";
-    item += "       <small>" + object.date + "</small>";
     if (
       (!$.inArray("website", object.filter) || object.weblink) &&
       object.link != null
