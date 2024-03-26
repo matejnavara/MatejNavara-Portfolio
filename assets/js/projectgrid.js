@@ -126,7 +126,6 @@ proto(App, {
       {
         name: "Novana Beauty Website",
         desc: "Bespoke website, branding and promotional material for London based beauty studio.",
-        link: '"http://www.novanabeauty.com/" target="_blank"',
         img: "web_novanabeauty.gif",
         date: "2016",
         filter: ["website", "javascript"],
