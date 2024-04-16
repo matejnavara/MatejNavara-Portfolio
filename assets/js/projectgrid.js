@@ -211,6 +211,7 @@ proto(App, {
         img: "web_afc.gif",
         date: "2019",
         filter: ["website"],
+        weblink: true,
       },
       {
         name: "Herbanika eCommerce",
@@ -324,12 +325,13 @@ proto(App, {
 
     item += '<img src="assets/images/' + object.img + '" alt="" />';
     item += object.weblink ? "</a>" : "</div>";
-    item +=
-      "       <h2 style='margin-bottom: 0;'><a href=" +
-      object.link +
-      ">" +
-      object.name +
-      "</a></h2>";
+    item += object.weblink
+      ? "       <h2 style='margin-bottom: 0;'><a href=" +
+        object.link +
+        ">" +
+        object.name +
+        "</a></h2>"
+      : "       <h2 style='margin-bottom: 0;'>" + object.name + "</h2>";
     item += "       <p style='margin-bottom: 1em;'>" + object.date + "</p>";
     item += "       <p>" + object.desc + "</p>";
     if (
