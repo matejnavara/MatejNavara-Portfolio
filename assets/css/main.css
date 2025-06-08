@@ -2333,6 +2333,7 @@ ol.default li {
     width: 19.5em;
     height: 19.5em;
     margin: 0;
+    max-width: fit-content;
   }
 }
 
