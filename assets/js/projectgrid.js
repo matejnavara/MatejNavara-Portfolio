@@ -297,6 +297,15 @@ proto(App, {
         link: '"https://rocketsquid.tech/" target="_blank"',
         weblink: true,
       },
+      {
+        name: "introstars",
+        desc: "First introductions marketplace where you can actually earn money for each intro you make and receive.",
+        img: "web_introstars.jpg",
+        date: "2025",
+        filter: ["website", "typescript"],
+        link: '"https://www.introstars.com/" target="_blank"',
+        weblink: true,
+      },
     ];
 
     for (var i = 0; i < itemsData.length; i++) this._createItem(itemsData[i]);
